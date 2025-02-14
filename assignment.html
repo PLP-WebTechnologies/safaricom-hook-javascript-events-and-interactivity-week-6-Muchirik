@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 6 Assignment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="content">
+        <h1>Week 6 Assignment</h1>
+
+        <!-- Ineractive button with onClick -->
+         <button id="toggleButton">Toggle Background Color</button>
+         <br><br>
+
+         <!-- Slider with Real-Time Feedback (onInput) -->
+          <input type="range" id="slider" min="10" max="100" value="50" oninput="changefontSize()">
+          <label for="slider">Font Size: <span id="sliderValue">50</span></label>
+            <br><br>
+         <!-- Slider that adjusts the size of a paragraph text dynamically -->
+          <input type="range" id="slider2" min="10" max="100" value="20">
+            <p id="paragraph">This is a paragraph of text that will change size as you slide the slider above!</p>
+            <br><br>
+        <!-- Create a modal that displays when a button is clicked and hides when the user clicks a close button -->
+         <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closeModal">&times;</span>
+                <p>This is a modal! Click the 'X' to close it.</p>
+            </div>
+         </div>
+         <button id="openModal">Open Modal</button>
+
+         <!-- Include a form with the following fields: Name (required, minimum 3 characters), Email (validate email format), password (minimum 8 characters, atleast one uppercase letter and one number) -->
+          <!-- Display error messages if validation fails -->
+           <!-- prevent form submission if there are errors -->
+            <form id="myForm" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required minlength="3">
+                <span id="nameError" style="color: red;"></span>
+                <br><br>
+                <label for="email">Email:</label>
+                <!-- validate email error -->
+                 <!-- display error messages if validation fails -->
+                    <!-- prevent form submission if there are errors -->
+                <span id="emailError" style="color: red;"></span>
+                <input type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                <br><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                <span id="passwordError" style="color: red;"></span>
+                <br><br>
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                <br><br>
+                <span id="confirmPasswordError" style="color: red;"></span>
+                <br>
+                <span id="submitError" style="color: red;"></span>
+
+                <button type="submit" id="submit">Submit</button>
+            </form>
+        <!-- Add a dropdown menu that displays a custom message when the selected option changes (onchange). -->
+         <select id="dropdown">
+            <option value="option1">Option1</option>
+            <option value="option2">Option2</option>
+            <option value="option3">Option3</option>
+            <option value="option4">Option4</option>
+            <option value="option5">Option5</option>
+         </select>
+         <div id="optionmessage">
+
+         </div>
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>

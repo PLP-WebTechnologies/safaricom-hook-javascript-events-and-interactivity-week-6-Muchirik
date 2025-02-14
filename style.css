@@ -1,0 +1,48 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background-color: greenyellow;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    background-color: aquamarine;
+    padding: 12px;
+    border-radius: 5px;
+}
+/* Change heading size */
+h1{
+    font-size: 30px;
+}
+
+#openModal{
+    background-color: brown;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.modal{
+    display: none;
+}
+
+#dropdown{
+    padding: 10px;
+    margin: 10px;
+}
+
+#optionmessage{
+    display: flex;
+    justify-content: center;
+    color: red;
+    font-size: 20px;
+    padding: auto;
+    margin: 10px;
+}
